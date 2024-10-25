@@ -2,10 +2,24 @@
 #define _VEC_H
 #include <ostream>
 #include <math.h>
+
+/**
+ * @brief 3D vector template
+ */
+
 template<typename T>
 class _vec3{ // generic 3D vector of type T
 public:
+/**
+ * @brief Vector initialization
+ */
  _vec3<T>(): d{0,0,0} {}
+ /**
+ * @brief using initialized vector with given values
+ * @param a value for x comp. 
+ * @param b value for y comp.
+ * @param c value for z comp.
+ */
  _vec3<T>(T a, T b, T c) : d{a,b,c} {}
  T& operator[] (int i) {return d[i];}
  T operator[] (int i) const {return d[i];}
